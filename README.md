@@ -11,6 +11,7 @@ You can find a live example [here](http://flauc.github.io/angular2-easy-forms)
 1. [Validation](#validation)
 1. [Events](#events)
 1. [Settings](#settings)
+1. [Build from source](#source)
 
 ## Setup
 You can install the library from npm with the following command: 
@@ -254,5 +255,14 @@ classes: {
 }
 ```
 
-
-
+## Source
+If you want to make a new build:
+* Make your changes to the 'src' folder files
+* Compile each project (source AND example) from Typescript to Javascript:
+```
+npm run tsc
+```
+* Move the files from the lib folder to the example node_module folder and launch the example:
+```
+gulp serve
+```

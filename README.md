@@ -11,7 +11,7 @@ You can find a live example [here](http://flauc.github.io/angular2-easy-forms)
 1. [Validation](#validation)
 1. [Events](#events)
 1. [Settings](#settings)
-1. [Build from source](#source)
+1. [Build](#build)
 
 ## Setup
 You can install the library from npm with the following command: 
@@ -255,7 +255,7 @@ classes: {
 }
 ```
 
-## Source
+## Build
 If you want to make a new build:
 * Make your changes to the 'src' folder files
 * Compile each project (source AND example) from Typescript to Javascript:

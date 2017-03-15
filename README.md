@@ -1,9 +1,11 @@
-# Angular 2 Easy Forms
+# Angular 2 Easy Forms - Enterthusiast
 Is a library for simplification of forms in Angular 2. Its meant for quick creation of forms and form validation.
 
 The library is inspired by [angular.io dynamic forms](https://angular.io/docs/ts/latest/cookbook/dynamic-form.html).
 
 You can find a live example [here](http://flauc.github.io/angular2-easy-forms)
+
+@enterthusiast humbly modified it for his needs.
 
 ## Documentation 
 1. [Setup](#setup)

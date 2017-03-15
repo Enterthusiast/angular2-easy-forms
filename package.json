@@ -1,10 +1,10 @@
 {
-  "name": "angular2-easy-forms",
-  "version": "0.3.0",
-  "description": "An Angular 2 library for simplification of form creation and validation.",
+  "name": "angular2-easy-forms-enterthusiast",
+  "version": "0.3.1",
+  "description": "An Angular 2 library for simplification of form creation and validation. @enterthusiast humbly modified it for his needs.",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/flauc/angular2-easy-forms.git"
+    "url": "git+https://github.com/enterthusiast/angular2-easy-forms.git"
   },
   "keywords": [
     "Angular 2",

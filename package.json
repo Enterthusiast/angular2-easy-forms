@@ -1,6 +1,6 @@
 {
   "name": "angular2-easy-forms-enterthusiast",
-  "version": "0.3.4",
+  "version": "0.3.5",
   "description": "An Angular 2 library for simplification of form creation and validation. @enterthusiast humbly modified it for his needs.",
   "repository": {
     "type": "git",

@@ -5,7 +5,9 @@ The library is inspired by [angular.io dynamic forms](https://angular.io/docs/ts
 
 You can find a live example [here](http://flauc.github.io/angular2-easy-forms)
 
-@enterthusiast humbly modified it for his needs, will continue to update if new needs arise.
+Angular 2 Easy Forms is a lib made by [Filip Lauc](https://www.npmjs.com/~flauc)
+
+[Enterthusiast](https://www.npmjs.com/~enterthusiast) humbly modified it for his needs, will continue to update if new needs arise.
 Hope it can help other modify and get the most of this really cool lib!
 
 #### Modifications by @enterthusiast

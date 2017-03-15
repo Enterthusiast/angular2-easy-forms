@@ -19,6 +19,12 @@
   "bugs": {
     "url": "https://github.com/flauc/angular2-easy-forms/issues"
   },
+  "scripts": {
+    "postinstall": "typings install",
+    "tsc": "tsc",
+    "tsc:w": "tsc -w",
+    "typings": "typings"
+  },
   "peerDependencies": {
     "@angular/core": "^2.0.0",
     "@angular/common": "^2.0.0",

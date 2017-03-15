@@ -1,3 +1,12 @@
+import {Component} from "@angular/core";
+
+
+// workaround: fake export to prevent typescript compilation quirk
+// more info: without real export here, typescript export a half backed export making javascript crash in the browser
+@Component({})
+export class dataInterface {}
+
+// real useful stuff here
 export interface EasyFormData {
     questions: Question[]
     settings?: Settings

@@ -25,7 +25,7 @@ import {Question} from './data.interface'
                 
                 <div *ngSwitchCase="'checkbox'" [ngClass]="question.classes?.question">
                     <div class="checkbox" *ngFor="let o of question.options">
-                        <input 
+                        <input [id]="o.name ? o.name : o.value"
                             [type]="question.type"
                             [formControlName]="question.key"
                             [name]="question.key"
@@ -34,7 +34,7 @@ import {Question} from './data.interface'
                             (change)="chackboxValueChange()"
                             [disabled]="o.disabled"
                             (click)="setCheckbox(o)">
-                        <span>{{o.name ? o.name : o.value}}</span>   
+                        <label attr.for="{{o.name ? o.name : o.value}}">{{o.name ? o.name : o.value}}</label>
                     </div>
                 </div>
                 
@@ -48,14 +48,14 @@ import {Question} from './data.interface'
                 
                 <div *ngSwitchCase="'radio'" [ngClass]="question.classes?.question">
                     <div class="radio" *ngFor="let o of question.options">
-                        <input 
+                        <input [id]="o.name ? o.name : o.value"
                             [type]="question.type"
                             [formControlName]="question.key"
                             [name]="question.key"
                             [value]="o.value"
                             [checked]="question.value === o.value"
                             (click)="setRadio(o)">
-                        <span>{{o.name ? o.name : o.value}}</span>    
+                        <label attr.for="{{o.name ? o.name : o.value}}">{{o.name ? o.name : o.value}}</label>    
                     </div>
                 </div>
             

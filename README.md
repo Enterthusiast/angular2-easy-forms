@@ -5,7 +5,15 @@ The library is inspired by [angular.io dynamic forms](https://angular.io/docs/ts
 
 You can find a live example [here](http://flauc.github.io/angular2-easy-forms)
 
-@enterthusiast humbly modified it for his needs.
+@enterthusiast humbly modified it for his needs, will continue to update if new needs arise.
+Hope it can help other modify and get the most of this really cool lib!
+
+#### Modifications by @enterthusiast
+* Radio and Checkboxes now work with `<input id='foo'>` and their matching `<label for='foo'>`, allowing the user to click the text to check.
+* Add typescript on the main project, making it easier to build the lib.
+* Consequently add the Build paragraph to README.md explaining how to compile the lib.
+* Workaround a typescript compilation artifact for data.interface.ts. The resulting js was trying to export nothing, making the app crash. Add a fake and empty component export.
+
 
 ## Documentation 
 1. [Setup](#setup)

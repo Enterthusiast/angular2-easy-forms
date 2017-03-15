@@ -18,7 +18,7 @@ You can find a live example [here](http://flauc.github.io/angular2-easy-forms)
 ## Setup
 You can install the library from npm with the following command: 
 ```
-npm install --save angular2-easy-forms
+npm install --save angular2-easy-forms-enterthusiast
 ```
 
 Import the `EasyFormsModule` in your `app.module`. You also need to have the `FormsModule` imported for the library to work. 

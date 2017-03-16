@@ -15,7 +15,8 @@ Hope it can help other modify and get the most of this really cool lib!
 * Add typescript on the main project, making it easier to build the lib.
 * Consequently add the Build paragraph to README.md explaining how to compile the lib.
 * Workaround a typescript compilation artifact for data.interface.ts. The resulting js was trying to export nothing, making the app crash. Add a fake and empty component export.
-
+* Added multiple option to add classes everywhere in the form, it works well with bootstrap
+* Add some Boostrap logic/classes for validation feedback, you can enable the bootstrap theme by uncommenting `customTheme: 'ng2Bootstrap3'` in the example `app.component.ts` file. More about [ng2-boostrap](https://github.com/valor-software/ng2-bootstrap).
 
 ## Documentation 
 1. [Setup](#setup)

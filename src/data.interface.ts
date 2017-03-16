@@ -23,7 +23,10 @@ export interface Question {
     emitChanges?: boolean
     options?: Array<{value: string | number, name: string, disabled: boolean}>
     classes?: {
-        wrapper?: string 
+        wrapper?: string | Array<string>
+        wrapperGroup?: string | Array<string>
+        wrapperLabel?: string | Array<string>
+        wrapperQuestion?: string | Array<string>
         label?: string | Array<string>
         question?: string | Array<string>
         error?: string | Array<string>
@@ -38,11 +41,15 @@ export interface Settings {
     singleErrorMessage?: boolean
     showValidation?: boolean
     errorOnDirty?: boolean
+    customTheme?: string
 }
 
 export interface Classes {
+    wrapper?: string | Array<string>
     form?: string | Array<string>
+    wrapperSubmit?: string | Array<string>
     submit?: string | Array<string>
+    submitButton?: string | Array<string>
 }
 
 export interface Validation {

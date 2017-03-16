@@ -1,4 +1,4 @@
-import {Component, EventEmitter, Input, Output} from '@angular/core'
+import {Component, EventEmitter, HostBinding, Input, Output} from '@angular/core'
 import {FormGroup} from '@angular/forms';
 import {ControlGroupService} from './control-group.service'
 import {EasyFormData, Settings} from './data.interface'
@@ -9,13 +9,22 @@ import {EasyFormData, Settings} from './data.interface'
     template: `
         <form (ngSubmit)="submit()" [formGroup]="comp.form" [ngClass]="comp.data.classes?.form">
             <ef-question *ngFor="let q of comp.data.questions" [info]="{question: q, form: comp.form, settings: comp.settings}" (valueChange)="onQuestionValueChange($event)"></ef-question>
-            <div *ngIf="comp.data.settings.submitButton" [ngClass]="comp.data.classes?.submit">
-                <button type="submit" [disabled]="!comp.form.valid && comp.settings.extraValidation">{{comp.data.settings.submitButtonText}}</button>
+
+            <div [ngClass]="comp.data.classes?.wrapperSubmit">
+                <div *ngIf="comp.data.settings.submitButton" [ngClass]="comp.data.classes?.submit">
+                    <button type="submit" [ngClass]="comp.data.classes?.submitButton" [disabled]="!comp.form.valid && comp.settings.extraValidation">{{comp.data.settings.submitButtonText}}</button>
+                </div>
             </div>
+
         </form>
     `
 })
 export class EasyFormsComponent {
+
+    // Add class to the wrapper
+    @HostBinding('class') get toSet() {
+        return this.comp && this.comp.data && this.comp.data.classes && this.comp.data.classes.wrapper ? this.comp.data.classes.wrapper : '';
+    }
 
     // Input
     @Input() set easyFormData(value: EasyFormData) {
@@ -33,7 +42,8 @@ export class EasyFormsComponent {
                 singleErrorMessage: this._data.settings.singleErrorMessage,
                 errorOnDirty: this._data.settings.errorOnDirty,
                 showValidation: this._data.settings.showValidation,
-                extraValidation: this._data.settings.submitButtonExtraValidation || true
+                extraValidation: this._data.settings.submitButtonExtraValidation || true,
+                customTheme: this._data.settings.customTheme
             }
         };
     }
@@ -73,7 +83,8 @@ export class EasyFormsComponent {
             submitButtonExtraValidation: null,
             showValidation: true,
             singleErrorMessage: true,
-            errorOnDirty: true
+            errorOnDirty: true,
+            customTheme: ''
         };
 
         // Add received settings

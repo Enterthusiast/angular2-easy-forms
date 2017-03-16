@@ -1,4 +1,9 @@
 import {Component} from '@angular/core';
+import {
+    AlertModule, AccordionModule, ButtonsModule, CarouselModule, CollapseModule, DatepickerModule,
+    DropdownModule, ModalModule, PaginationModule, PopoverModule, ProgressbarModule, RatingModule, SortableModule,
+    TabsModule, TimepickerModule, TooltipModule, TypeaheadModule
+} from 'ng2-bootstrap';
 
 @Component({
     selector: 'app',
@@ -8,25 +13,45 @@ import {Component} from '@angular/core';
 })
 
 export class AppComponent {
+
+    defaultClasses = {
+        wrapperGroup: 'form-group',
+        label: 'col-sm-2 control-label',
+        wrapperQuestion: 'col-sm-10',
+        error: 'col-sm-offset-2 col-sm-10',
+        question: 'form-control'
+    };
+    defaultCheckboxRadioClasses = {
+        ...this.defaultClasses,
+        question: ''
+    };
+
     data = {
+        classes: {
+            wrapper: 'col-sm-12',
+            form: 'form-horizontal',
+            wrapperSubmit: 'form-group',
+            submit: 'col-sm-offset-2 col-sm-10',
+            submitButton: 'btn btn-default'
+        },
         settings: {
             submitButtonText: 'Send',
-            errorOnDirty: true
+            errorOnDirty: true,
+            // customTheme: 'ng2Bootstrap3'
         },
         questions: [
             {
+                classes: this.defaultClasses,
                 type: 'text',
                 key: 'Prvi',
                 label: 'Prvi',
                 placeholder: 'perica',
-                classes: {
-                    'wrapper': 'Test'
-                },
                 validation: [
                     {type: 'required'}
                 ]
             },
             {
+                classes: this.defaultClasses,
                 type: 'text',
                 key: 'Drugi',
                 label: 'Drugi',
@@ -36,6 +61,7 @@ export class AppComponent {
                 ]
             },
             {
+                classes: this.defaultClasses,
                 type: 'text',
                 key: 'firstName',
                 value: 'John Doe',
@@ -47,6 +73,7 @@ export class AppComponent {
                 ]
             },
             {
+                classes: this.defaultClasses,
                 type: 'password',
                 key: 'password',
                 label: 'Password',
@@ -55,6 +82,7 @@ export class AppComponent {
                 ]
             },
             {
+                classes: this.defaultClasses,
                 type: 'dropdown',
                 key: 'address',
                 label: 'Address',
@@ -66,6 +94,7 @@ export class AppComponent {
                 ]
             },
             {
+                classes: this.defaultCheckboxRadioClasses,
                 type: 'radio',
                 key: 'gender',
                 label: 'Gender',
@@ -76,6 +105,7 @@ export class AppComponent {
                 ]
             },
             {
+                classes: this.defaultCheckboxRadioClasses,
                 type: 'checkbox',
                 key: 'things',
                 label: 'Things You Like',

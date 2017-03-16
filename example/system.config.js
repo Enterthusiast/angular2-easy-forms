@@ -3,7 +3,9 @@
         'app': 'app',
         '@angular': 'node_modules/@angular',
         'rxjs': 'node_modules/rxjs',
-        'angular2-easy-forms': 'node_modules/angular2-easy-forms'
+        'angular2-easy-forms': 'node_modules/angular2-easy-forms',
+        'moment': 'node_modules/moment/moment.js',
+        'ng2-bootstrap': 'node_modules/ng2-bootstrap/bundles/ng2-bootstrap.umd.js'
     };
 
     var packages = {

@@ -6,7 +6,7 @@ import {Question} from './data.interface';
 @Component({
     selector: 'ef-question',
     template: `
-        <div [formGroup]="form">
+        <div [formGroup]="form" [hidden]="question.hidden">
 
             <div [ngSwitch]="settings.customTheme">
 

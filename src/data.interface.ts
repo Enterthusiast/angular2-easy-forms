@@ -32,6 +32,7 @@ export interface Question {
         error?: string | Array<string>
     }
     validation?: Validation | Array<Validation>
+    hidden?: boolean
 }
 
 export interface Settings {

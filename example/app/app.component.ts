@@ -43,12 +43,21 @@ export class AppComponent {
             {
                 classes: this.defaultClasses,
                 type: 'text',
+                key: 'hidden',
+                label: 'Hidden',
+                placeholder: 'Hidden',
+                hidden: true
+            },
+            {
+                classes: this.defaultClasses,
+                type: 'text',
                 key: 'Prvi',
                 label: 'Prvi',
                 placeholder: 'perica',
                 validation: [
                     {type: 'required'}
-                ]
+                ],
+                hidden: false
             },
             {
                 classes: this.defaultClasses,
